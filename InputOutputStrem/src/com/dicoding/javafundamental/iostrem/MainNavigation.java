@@ -1,0 +1,32 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.dicoding.javafundamental.iostrem;
+
+import java.io.File;
+
+/**
+ *
+ * @author ASUS
+ */
+public class MainNavigation {
+    public static void main(String args[]) {
+        String dirname = "/java/latihan1";
+        File file = null;
+        String[] paths;
+        try {
+            // Instansiasi objek File
+            file = new File(dirname);
+            // Ambil list files dan masukkan ke string paths
+            paths = file.list();
+            // Tampilkan semua path yang ada
+            for (String path : paths) {
+                System.out.println(path);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+}
+}
